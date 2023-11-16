@@ -5,8 +5,8 @@
 #include "engine.h"
 #include <memory>
 
-int main(int argc, char const *argv[])
+int main(int /*argc*/, char const* /*argv*/[])
 {
-    std::unique_ptr<Engine> e(new Engine());
+    std::unique_ptr<Engine> const engine(new Engine());
     return 0;
 }

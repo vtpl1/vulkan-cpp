@@ -2,5 +2,8 @@
   "name": "vulkan-cpp",
   "version": "0.1.0",
   "builtin-baseline": "354a05b99db8bec88347a8d35b46fbe7ef4c16da",
-  "dependencies": ["vulkan", "logutil"]
+  "dependencies": [
+    "vulkan",
+    "logutil"
+  ]
 }

@@ -1,0 +1,9 @@
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"mounts": [
+		"source=${localWorkspaceFolder}/../thirdparty,target=/workspaces/thirdparty,type=bind,consistency=cached"
+	]
+}

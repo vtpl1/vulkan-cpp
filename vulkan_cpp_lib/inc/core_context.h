@@ -8,20 +8,20 @@
 #include <string>
 namespace vtpl
 {
-    class CoreContext
-    {
-    private:
-        CoreContext(std::string session_folder, std::string lib_folder);
-        ~CoreContext() = default;
+class CoreContext
+{
+  private:
+    CoreContext(std::string session_folder, std::string lib_folder);
+    ~CoreContext() = default;
 
-        std::string _session_folder;
-        std::string _lib_folder;
+    std::string _session_folder;
+    std::string _lib_folder;
 
-    public:
-        static CoreContext &instance(std::string session_folder = "session/", std::string lib_folder = "lib/");
-        CoreContext(const CoreContext &) = delete;
-        CoreContext &operator=(const CoreContext &) = delete;
-    };
+  public:
+    static CoreContext& instance(std::string session_folder = "session/", std::string lib_folder = "lib/");
+    CoreContext(const CoreContext&) = delete;
+    CoreContext& operator=(const CoreContext&) = delete;
+};
 
 } // namespace vtpl
 #endif // core_context_h

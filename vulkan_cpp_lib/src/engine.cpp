@@ -3,11 +3,13 @@
 // *****************************************************
 
 #include "engine.h"
-#include <logging.h>
 #include "core_context.h"
-#include "vulkan_logging.h"
-#include "instance.h"
 #include "device.h"
+#include "instance.h"
+#include "vulkan_logging.h"
+#include <logging.h>
+#include <vulkan/vulkan.hpp>
+#include <vulkan/vulkan_core.h>
 
 Engine::Engine()
 {
@@ -38,6 +40,25 @@ Engine::~Engine()
     //  glfwTerminate();    // FIXME
 }
 
+/*
+* Including the prebuilt header from the lunarg sdk will load
+* most functions, but not all.
+*
+* Functions can also be dynamically loaded, using the call
+*
+* PFN_vkVoidFunction vkGetInstanceProcAddr(
+    VkInstance                                  instance,
+    const char*                                 pName);
+
+ or
+
+ PFN_vkVoidFunction vkGetDeviceProcAddr(
+    VkDevice                                    device,
+    const char*                                 pName);
+
+    We will look at this later, once we've created an instance and device.
+*/
+
 void Engine::make_instance()
 {
     instance = vtpl::make_instance(debugMode, "ID Tech 12");
@@ -48,8 +69,4 @@ void Engine::make_instance()
     }
 }
 
-void Engine::make_device()
-{
-
-    physicalDevice = vtpl::choose_physical_device(instance, debugMode);
-}
+void Engine::make_device() { physicalDevice = vtpl::choose_physical_device(instance, debugMode); }

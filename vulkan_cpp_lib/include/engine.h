@@ -9,11 +9,11 @@
 class Engine
 {
 
-public:
+  public:
     Engine();
     ~Engine();
 
-private:
+  private:
     // whether to print debug messages in functions
     bool debugMode = true;
 
@@ -23,9 +23,9 @@ private:
     // GLFWwindow *window{nullptr};
 
     // instance-related variables
-    vk::Instance instance{nullptr};
+    vk::Instance               instance{nullptr};
     vk::DebugUtilsMessengerEXT debugMessenger{nullptr};
-    vk::DispatchLoaderDynamic dldi;
+    vk::DispatchLoaderDynamic  dldi;
 
     // device-related variables
     vk::PhysicalDevice physicalDevice{nullptr};
