@@ -14,7 +14,7 @@
   "python.formatting.provider": "yapf",
   "editor.codeActionsOnSave": {},
   "editor.formatOnSave": true,
-  "cmake.options.statusBarVisibility": "icon",
+  "cmake.options.statusBarVisibility": "compact",
   "files.associations": {
     "set": "cpp",
     "vector": "cpp",

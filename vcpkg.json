@@ -4,6 +4,8 @@
   "builtin-baseline": "354a05b99db8bec88347a8d35b46fbe7ef4c16da",
   "dependencies": [
     "vulkan",
-    "logutil"
+    "logutil",
+    "glfw3",
+    "glm"
   ]
 }

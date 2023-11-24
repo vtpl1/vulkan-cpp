@@ -44,4 +44,5 @@ endif() #git
 
 add_subdirectory(vulkan_cpp_lib)
 add_subdirectory(vulkan_cpp_exe)
+add_subdirectory(vulkan_glfw_exe)
 
