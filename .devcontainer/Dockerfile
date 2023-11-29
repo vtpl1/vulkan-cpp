@@ -22,3 +22,5 @@ RUN curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-
 RUN pip install clang-tidy clang-format
 
 RUN apt update && apt install -y iputils-ping ccache
+
+RUN apt update && apt install -y libxinerama-dev libxcursor-dev xorg-dev libglu1-mesa-dev pkg-config

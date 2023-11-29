@@ -6,6 +6,16 @@
     "vulkan",
     "logutil",
     "glfw3",
-    "glm"
+    "glm",
+    "stb",
+    "implot",
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "glfw-binding",
+        "vulkan-binding"
+      ]
+    }
   ]
 }
